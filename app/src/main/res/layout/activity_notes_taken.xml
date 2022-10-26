@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".NotesTakenActivity">
+
+    //Toolbar
+    <androidx.appcompat.widget.Toolbar
+        android:layout_marginTop="10dp"
+        android:id="@+id/toolbar_notes"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:title="@string/app_name"
+        android:titleTextColor="@color/black">
+
+        //back button
+    <ImageButton
+        android:id="@+id/backBtn"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/greeny"
+        android:src="@drawable/ic_arrow_back"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    //Card
+    <RelativeLayout
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_card_16dp_light_greeny"
+        android:padding="10dp"
+        android:layout_margin="15dp">
+
+        //Title
+
+        <EditText
+            android:id="@+id/editText_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/titleSet"
+            android:padding="8dp"
+            android:singleLine="true"
+            android:textColor="@color/grey"
+            android:textColorHint="@color/grey"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        //Description
+        <EditText
+            android:layout_below="@id/editText_title"
+            android:id="@+id/editText_notes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/descrSet"
+            android:padding="8dp"
+            android:inputType="textMultiLine"
+            android:textColor="@color/grey"
+            android:textColorHint="@color/grey"
+            android:textSize="18sp"
+            android:textStyle="normal"/>
+
+        //Done and save button
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_below="@+id/editText_notes"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/imageView_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_save_check"
+            app:backgroundTint="#8FBC8B"
+            android:layout_margin="15dp"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+</LinearLayout>

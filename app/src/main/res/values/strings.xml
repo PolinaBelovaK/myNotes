@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Notes+</string>
+    //menu
+    <string name="pinUnpin">Закрепить/Открепить</string>
+    <string name="delete">Удалить</string>
+    //search field
+    <string name="queryHintText">Введите текст</string>
+    //note creator
+    <string name="titleSet">Заголовок</string>
+    <string name="descrSet">Введите текст...</string>
+    <string name="date">Текущая дата</string>
+
+</resources>
